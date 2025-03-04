@@ -9,7 +9,7 @@ st.title('YouTube 🐷')
 st.write('')#spacer
 
 if menu == 'Video Categories':
-    videocat = st.sidebar.radio('Choose Videos',['All','Gaming','Sports','Kids'])
+    videocat = st.sidebar.radio('Choose Videos',['All','Gaming','Sports','Construction','Kids'])
 
     if videocat == 'All' or videocat == 'Gaming':
         st.subheader('Gaming')
@@ -80,26 +80,112 @@ if menu == 'Video Categories':
             st.write('Rocket League Story Mode')
             st.success('32:14')
             st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=Qqj-ImDsYk8')
+
+            st.write('')
+
+            st.image('https://i.ytimg.com/vi/eU6ouVA3dRc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBmSuVWq0TUrkN1mab6A5CmTjs_lA')
+            st.write('Winning Every Rocket League Game in a Row')
+            st.success('36:47')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=eU6ouVA3dRc')
         
         with sp2:
             st.image('https://images2.minutemediacdn.com/image/upload/c_crop,w_3838,h_2158,x_0,y_0/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/esports_illustrated/01j4hzxrkt5rzvzcrkkn.jpg')
             st.write('EAFC 25 Mobile Gameplay')
             st.success('9:22')
             st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=ZnHrAuK5e60')
+
+            st.write('')
+
+            st.image('https://i.ytimg.com/vi/eC6aM_Eef1U/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLA-mJK86wq7dotffJcTrh_Yh5lK2Q')
+            st.write('The FC 25 Gamplay is actually GOOD')
+            st.success('10:21')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=eC6aM_Eef1U')
         
         with sp3:
             st.image('https://cdn.mos.cms.futurecdn.net/rHSFRBAvLiXw2obQr53nh5.jpg')
             st.write('HIGHLIGHTS | Arsenal vs Man City')
             st.success('2:17')
             st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=4-H15-CeFQo')
+
+            st.write('')
+
+            st.image('https://i.ytimg.com/vi/UcnB9e5O5NY/maxresdefault.jpg')
+            st.write('The Ultimate Guide for Shooting a Basketball')
+            st.success('6:20')
         
         with sp4:
             st.image('https://i.ytimg.com/vi/XLH9ww29C1E/maxresdefault.jpg')
             st.write('Learn How to Dribble Better in 1 Day')
             st.success('7:55')
             st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=XLH9ww29C1E')
+
+            st.write('')
+
+            st.image('https://i.ytimg.com/vi/CMQp0bwjokw/maxresdefault.jpg')
+            st.write('How To Dribble A Basketball')
+            st.success('9:32')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=CMQp0bwjokw')
         
         st.subheader('')#spacer
+
+    if videocat == 'All' or videocat == 'Construction':
+        st.subheader('Construction')
+
+        cu1,cu2,cu3,cu4 = st.columns(4)
+
+        with cu1:
+            st.image('https://i.ytimg.com/vi/6iN78oUhB8M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC2cC_jge-Isd05IDtzTni3LT0g_g')
+            st.write('I Built Bikini Bottom in My Backyard')
+            st.success('8:06')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=d748kQzHuRM')
+
+            st.write('')
+
+            st.image('https://i.ytimg.com/vi/SJN903kCJrc/maxresdefault.jpg')
+            st.write('I Built a Secret Gaming Room!')
+            st.success('8:59')
+            st.link_button(label='Play Video',url='')
+        
+        with cu2:
+            st.image('https://i.ytimg.com/vi/bfONXX3WtT4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6xvTyIsiv_9Z3nHNqd_3OGMwERQ')
+            st.write('I Built 5 SECRET Rooms You’d Never Find!')
+            st.success('19:18')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=bfONXX3WtT4')
+
+            st.write('')
+
+            st.image('https://i.ytimg.com/vi/llAf-w1WE0c/maxresdefault.jpg')
+            st.write('I Built The Krusty Krab in Real Life!')
+            st.success('8:41')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=llAf-w1WE0c')
+        
+        with cu3:
+            st.image('https://s1.cdn.autoevolution.com/images/news/gallery/this-luxury-tiny-house-costs-only-25000-and-is-towed-by-a-cybertruck_20.jpg')
+            st.write('I Built a Luxury $25,000 Tiny House!')
+            st.success('16:57')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=Xwc4VqF6y1U')
+
+            st.write('')
+
+            st.image('https://i.ytimg.com/vi/4PHGAPMdrAo/maxresdefault.jpg')
+            st.write('I Built a Real Life Fortnite Battle Bus!')
+            st.success('8:10')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=4PHGAPMdrAo')
+
+        with cu4:
+            st.image('https://i.ytimg.com/vi/VQq0gQvKJmM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBiDOvmynBjcSnKgBgGRO_JveuJFA')
+            st.write('I Built My House out of Legos')
+            st.success('13:33')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=VQq0gQvKJmM')
+
+            st.write('')
+
+            st.image('https://i.ytimg.com/vi/eguZ2NHXWsM/maxresdefault.jpg')
+            st.write('I Built MrBeast a Real Life Fortnite Battle Bus!')
+            st.success('9:45')
+            st.link_button(label='Play Video',url='https://www.youtube.com/watch?v=eguZ2NHXWsM')
+
+        st.subheader('')
         
     if videocat == 'All' or videocat == 'Kids':
         st.subheader('Kids')
