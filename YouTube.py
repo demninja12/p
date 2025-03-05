@@ -179,7 +179,7 @@ if menu == 'Video Categories':
             st.write('I Built The Krusty Krab in Real Life!')
             st.success('8:41')
             if st.button(label='Play Video',key='20'):
-                webbrowser.open('https://www.youtube.com/watch?v=llAf-w1WE0c')
+                webbrowser('https://www.youtube.com/watch?v=llAf-w1WE0c')
         
         with cu3:
             st.image('https://s1.cdn.autoevolution.com/images/news/gallery/this-luxury-tiny-house-costs-only-25000-and-is-towed-by-a-cybertruck_20.jpg')
