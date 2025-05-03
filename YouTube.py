@@ -1,9 +1,16 @@
 import streamlit as st
 import webbrowser
+import pandas as pd
+import plotly_express as px
 
 st.set_page_config(page_title='YouTube Pig',page_icon='🐷')
 
 menu = st.sidebar.selectbox('Menu',['Video Categories','Video Ratings'])
+
+try:
+    videolink = pd.read_csv('videorating.csv')
+except:
+    videolink = pd.DataFrame()
 
 st.title('YouTube 🐷')
 
@@ -23,6 +30,12 @@ if menu == 'Video Categories':
             st.success('23:56')
             if st.button(label='Play Video',key='1'):
                 webbrowser.open('https://www.youtube.com/watch?v=iAoZFghpRzY')
+                try:
+                    videolink.loc[0,'Roblox Video Game Tycoon'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Roblox Video Game Tycoon'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -31,6 +44,12 @@ if menu == 'Video Categories':
             st.success('4:53:55')
             if st.button(label='Play Video',key='2'):
                 webbrowser.open('https://www.youtube.com/watch?v=X5hsmqElIME')
+                try:
+                    videolink.loc[0,'Roblox Piggy Book 1'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Roblox Piggy Book 1'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with gm2:
             st.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvMc0wZJklMriLs_P3jPqeU9hjY2KIN_TfHQ&s')
@@ -38,6 +57,12 @@ if menu == 'Video Categories':
             st.success('11:40:04')
             if st.button(label='Play Video',key='3'):
                 webbrowser.open('https://www.youtube.com/watch?v=mxHIFijxTZY')
+                try:
+                    videolink.loc[0,'Minecraft Gameplay Walkthrough Full Game'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Minecraft Gameplay Walkthrough Full Game'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -45,7 +70,13 @@ if menu == 'Video Categories':
             st.write('Roblox Piggy Book 2')
             st.success('2:05:35')
             if st.button(label='Play Video',key='4'):
-                webbrowser.open('https://www.youtube.com/watch?v=Qil2bO3zG34')
+                webbrowser.open('https://www.youtube.com/watch?v=Qil2bO3zG3')
+                try:
+                    videolink.loc[0,'Roblox Piggy Book 2'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Roblox Piggy Book 2'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with gm3:
             st.image('https://i.ytimg.com/vi/lbk3Yie7_0I/maxresdefault.jpg')
@@ -53,6 +84,12 @@ if menu == 'Video Categories':
             st.success('15:38')
             if st.button(label='Play Video',key='5'):
                 webbrowser.open('https://www.youtube.com/watch?v=lbk3Yie7_0I')
+                try:
+                    videolink.loc[0,'Fortnite is MEGA (Season Reaction)'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Fortnite is MEGA (Season Reaction)'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -61,6 +98,12 @@ if menu == 'Video Categories':
             st.success('18:02')
             if st.button(label='Play Video',key='6'):
                 webbrowser.open('https://www.youtube.com/watch?v=58FeoJdNLKo')
+                try:
+                    videolink.loc[0,'Minecraft 100 Days'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Minecraft 100 Days'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with gm4:
             st.image('https://i.ytimg.com/vi/tBfeIXLuOYg/maxresdefault.jpg')
@@ -68,6 +111,12 @@ if menu == 'Video Categories':
             st.success('23:46')
             if st.button(label='Play Video',key='7'):
                 webbrowser.open('https://www.youtube.com/watch?v=tBfeIXLuOYg')
+                try:
+                    videolink.loc[0,'Minecraft But Every 10 Seconds TNT Spawns'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Minecraft But Every 10 Seconds TNT Spawns'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -76,6 +125,12 @@ if menu == 'Video Categories':
             st.success('18:08')
             if st.button(label='Play Video',key='8'):
                 webbrowser.open('https://www.youtube.com/watch?v=yDt87mPmBlQ')
+                try:
+                    videolink.loc[0,'Realistic Minecraft'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Realistic Minecraft'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         st.subheader('')#spacer
 
@@ -90,6 +145,12 @@ if menu == 'Video Categories':
             st.success('32:14')
             if st.button(label='Play Video',key='9'):
                 webbrowser.open('https://www.youtube.com/watch?v=Qqj-ImDsYk8')
+                try:
+                    videolink.loc[0,'Rocket League Story Mode'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Rocket League Story Mode'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -98,6 +159,12 @@ if menu == 'Video Categories':
             st.success('36:47')
             if st.button(label='Play Video',key='10'):
                 webbrowser.open('https://www.youtube.com/watch?v=eU6ouVA3dRc')
+                try:
+                    videolink.loc[0,'Winning Every Rocket League Game in a Row'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Winning Every Rocket League Game in a Row'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with sp2:
             st.image('https://images2.minutemediacdn.com/image/upload/c_crop,w_3838,h_2158,x_0,y_0/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/esports_illustrated/01j4hzxrkt5rzvzcrkkn.jpg')
@@ -105,6 +172,12 @@ if menu == 'Video Categories':
             st.success('9:22')
             if st.button(label='Play Video',key='11'):
                 webbrowser.open('https://www.youtube.com/watch?v=ZnHrAuK5e60')
+                try:
+                    videolink.loc[0,'EAFC 25 Mobile Gameplay'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'EAFC 25 Mobile Gameplay'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -113,6 +186,12 @@ if menu == 'Video Categories':
             st.success('10:21')
             if st.button(label='Play Video',key='12'):
                 webbrowser.open('https://www.youtube.com/watch?v=eC6aM_Eef1U')
+                try:
+                    videolink.loc[0,'The FC 25 Gamplay is actually GOOD'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'The FC 25 Gamplay is actually GOOD'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with sp3:
             st.image('https://cdn.mos.cms.futurecdn.net/rHSFRBAvLiXw2obQr53nh5.jpg')
@@ -120,6 +199,12 @@ if menu == 'Video Categories':
             st.success('2:17')
             if st.button(label='Play Video',key='13'):
                 webbrowser.open('https://www.youtube.com/watch?v=4-H15-CeFQo')
+                try:
+                    videolink.loc[0,'HIGHLIGHTS | Arsenal vs Man City'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'HIGHLIGHTS | Arsenal vs Man City'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -128,6 +213,12 @@ if menu == 'Video Categories':
             st.success('6:20')
             if st.button(label='Play Video',key='14'):
                 webbrowser.open('https://www.youtube.com/watch?v=UcnB9e5O5NY')
+                try:
+                    videolink.loc[0,'The Ultimate Guide for Shooting a Basketball'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'The Ultimate Guide for Shooting a Basketball'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with sp4:
             st.image('https://i.ytimg.com/vi/XLH9ww29C1E/maxresdefault.jpg')
@@ -135,6 +226,12 @@ if menu == 'Video Categories':
             st.success('7:55')
             if st.button(label='Play Video',key='15'):
                 webbrowser.open('https://www.youtube.com/watch?v=XLH9ww29C1E')
+                try:
+                    videolink.loc[0,'Learn How to Dribble Better in 1 Day'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Learn How to Dribble Better in 1 Day'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -143,6 +240,12 @@ if menu == 'Video Categories':
             st.success('9:32')
             if st.button(label='Play Video',key='16'):
                 webbrowser.open('https://www.youtube.com/watch?v=CMQp0bwjokw')
+                try:
+                    videolink.loc[0,'How To Dribble A Basketball'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'How To Dribble A Basketball'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         st.subheader('')#spacer
 
@@ -157,6 +260,12 @@ if menu == 'Video Categories':
             st.success('8:06')
             if st.button(label='Play Video',key='17'):
                 webbrowser.open('https://www.youtube.com/watch?v=d748kQzHuRM')
+                try:
+                    videolink.loc[0,'I Built Bikini Bottom in My Backyard'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'I Built Bikini Bottom in My Backyard'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -165,6 +274,12 @@ if menu == 'Video Categories':
             st.success('8:59')
             if st.button(label='Play Video',key='18'):
                 webbrowser.open('https://www.youtube.com/watch?v=SJN903kCJrc')
+                try:
+                    videolink.loc[0,'I Built a Secret Gaming Room!'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'I Built a Secret Gaming Room!'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with cu2:
             st.image('https://i.ytimg.com/vi/bfONXX3WtT4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD6xvTyIsiv_9Z3nHNqd_3OGMwERQ')
@@ -172,6 +287,12 @@ if menu == 'Video Categories':
             st.success('19:18')
             if st.button(label='Play Video',key='19'):
                 webbrowser.open('https://www.youtube.com/watch?v=bfONXX3WtT4')
+                try:
+                    videolink.loc[0,'I Built 5 SECRET Rooms You’d Never Find!'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'I Built 5 SECRET Rooms You’d Never Find!'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -180,6 +301,12 @@ if menu == 'Video Categories':
             st.success('8:41')
             if st.button(label='Play Video',key='20'):
                 webbrowser.open('https://www.youtube.com/watch?v=llAf-w1WE0c')
+                try:
+                    videolink.loc[0,'I Built The Krusty Krab in Real Life!'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'I Built The Krusty Krab in Real Life!'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with cu3:
             st.image('https://s1.cdn.autoevolution.com/images/news/gallery/this-luxury-tiny-house-costs-only-25000-and-is-towed-by-a-cybertruck_20.jpg')
@@ -187,6 +314,12 @@ if menu == 'Video Categories':
             st.success('16:57')
             if st.button(label='Play Video',key='21'):
                 webbrowser.open('https://www.youtube.com/watch?v=Xwc4VqF6y1U')
+                try:
+                    videolink.loc[0,'I Built a Luxury $25,000 Tiny House!'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'I Built a Luxury $25,000 Tiny House!'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -195,6 +328,12 @@ if menu == 'Video Categories':
             st.success('8:10')
             if st.button(label='Play Video',key='22'):
                 webbrowser.open('https://www.youtube.com/watch?v=4PHGAPMdrAo')
+                try:
+                    videolink.loc[0,'I Built a Real Life Fortnite Battle Bus!'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'I Built a Real Life Fortnite Battle Bus!'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
         with cu4:
             st.image('https://i.ytimg.com/vi/VQq0gQvKJmM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBiDOvmynBjcSnKgBgGRO_JveuJFA')
@@ -202,6 +341,12 @@ if menu == 'Video Categories':
             st.success('13:33')
             if st.button(label='Play Video',key='23'):
                 webbrowser.open('https://www.youtube.com/watch?v=VQq0gQvKJmM')
+                try:
+                    videolink.loc[0,'I Built My House out of Legos'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'I Built My House out of Legos'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -210,6 +355,12 @@ if menu == 'Video Categories':
             st.success('9:45')
             if st.button(label='Play Video',key='24'):
                 webbrowser.open('https://www.youtube.com/watch?v=eguZ2NHXWsM')
+                try:
+                    videolink.loc[0,'I Built MrBeast a Real Life Fortnite Battle Bus!'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'I Built MrBeast a Real Life Fortnite Battle Bus!'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
         st.subheader('')
         
@@ -225,6 +376,12 @@ if menu == 'Video Categories':
             st.success('1:04:06')
             if st.button(label='Play Video',key='25'):
                 webbrowser.open('https://www.youtube.com/watch?v=Ur--7Y1odjM')
+                try:
+                    videolink.loc[0,'Peppa Pig'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Peppa Pig'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -233,6 +390,12 @@ if menu == 'Video Categories':
             st.success('2:05:34')
             if st.button(label='Play Video',key='26'):
                 webbrowser.open('https://www.youtube.com/watch?v=XHB1w51V02A')
+                try:
+                    videolink.loc[0,'Peppa Pig'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Peppa Pig'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with k2:
             st.image('https://images.gem.cbc.ca/v1/synps-cbc/show/perso/cbc_pawpatrol_ott_background_v02.jpg?impolicy=ott&im=Resize=(_Size_)&quality=75')
@@ -240,6 +403,12 @@ if menu == 'Video Categories':
             st.success('12:06')
             if st.button(label='Play Video',key='27'):
                 webbrowser.open('https://www.youtube.com/watch?v=z1vXJVI2L5M')
+                try:
+                    videolink.loc[0,'Paw Patrol'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Paw Patrol'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -248,6 +417,12 @@ if menu == 'Video Categories':
             st.success('1:45:59')
             if st.button(label='Play Video',key='28'):
                 webbrowser.open('https://www.youtube.com/watch?v=298CQJfZsL8')
+                try:
+                    videolink.loc[0,'Paw Patrol'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Paw Patrol'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
         with k3:
             st.image('https://modernparenting-onemega.com/wp-content/uploads/2024/11/Theres-Another-Blippi-And-Heres-Why-2240x1260.jpg')
@@ -255,6 +430,12 @@ if menu == 'Video Categories':
             st.success('30:24')
             if st.button(label='Play Video',key='29'):
                 webbrowser.open('https://www.youtube.com/watch?v=iW4HMPeU3rw')
+                try:
+                    videolink.loc[0,'Blippi'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Blippi'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -263,6 +444,12 @@ if menu == 'Video Categories':
             st.success('2:05:09')
             if st.button(label='Play Video',key='30'):
                 webbrowser.open('https://www.youtube.com/watch?v=dLPpNMBm_3k')
+                try:
+                    videolink.loc[0,'Blippi'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Blippi'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
         
         with k4:
             st.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAjHGf-acigke5MW6q7orJzVT7PC1eiCEcZg&s')
@@ -270,6 +457,12 @@ if menu == 'Video Categories':
             st.success('47:28')
             if st.button(label='Play Video',key='31'):
                 webbrowser.open('https://www.youtube.com/watch?v=UCFxJIYgCtQ')
+                try:
+                    videolink.loc[0,'Cocomelon'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Cocomelon'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
 
             st.write('')
 
@@ -278,3 +471,16 @@ if menu == 'Video Categories':
             st.success('2:00:58')
             if st.button(label='Play Video',key='32'):
                 webbrowser.open('https://www.youtube.com/watch?v=1zU3fEMSOVo')
+                try:
+                    videolink.loc[0,'Cocomelon'] += 1
+                    videolink.to_csv('videorating.csv',index=False)
+                except KeyError:
+                    videolink.loc[0,'Cocomelon'] = 1
+                    videolink.to_csv('videorating.csv',index=False)
+            
+
+if menu == 'Video Ratings':
+    st.table(videolink)
+    melt_tables = videolink.melt(var_name='Video Title',value_name='Plays')
+    plotbar = px.bar(melt_tables, x = 'Video Title', y = 'Plays')
+    st.plotly_chart(plotbar)
