@@ -13,7 +13,36 @@ if Menu == 'Cafe':
 
     st.image('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fast-food-banner-template-design-925774928d842fc1ac0186b839a10444_screen.jpg?ts=1689218877')
 
-    app1,app2,app3,mea1,mea111,mea21,mea22,mea23,mea24,mea222,mea3,mea333,fru1,fru2,fru3,des1,des2,des3,des31,des32,des33,des34,dri1,dri2,dri3,km1,km2,km3,ptc1,pt = 0
+    app1 = 0
+    app2 = 0
+    app3 = 0
+    mea1 = 0
+    mea111 = 0
+    mea21 = 0
+    mea22 = 0
+    mea23 = 0
+    mea24 = 0
+    mea222 = 0
+    mea3 = 0
+    mea333 = 0
+    fru1 = 0
+    fru2 = 0
+    fru3 = 0
+    des1 = 0
+    des2 = 0
+    des3 = 0
+    des31 = 0
+    des32 = 0
+    des33 = 0
+    des34 = 0
+    dri1 = 0
+    dri2 = 0
+    dri3 = 0
+    km1 = 0
+    km2 = 0
+    km3 = 0
+    ptc1 = 0
+    pt = 0
     
     
     st.subheader('Appetizer')
