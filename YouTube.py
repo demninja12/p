@@ -481,6 +481,6 @@ if menu == 'Video Categories':
 
 if menu == 'Video Ratings':
     st.table(videolink)
-    melt_tables = videolink.melt(var_name='Video Title',value_name='Plays')
-    plotbar = px.bar(melt_tables, x = 'Video Title', y = 'Plays')
+    melt_table = videolink.melt(var_name='Video Title',value_name='Plays')
+    plotbar = px.bar(melt_table, x = 'Video Title', y = 'Plays')
     st.plotly_chart(plotbar)
