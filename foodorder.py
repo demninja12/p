@@ -42,6 +42,7 @@ if Menu == 'Cafe':
     km2 = 0
     km3 = 0
     ptc1 = 0
+    
     pt = 0
     
     
