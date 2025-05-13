@@ -9,7 +9,7 @@ menu = st.sidebar.selectbox('Menu',['Video Categories','Video Ratings'])
 try:
     import plotly_express as px
 except:
-    st.error('')
+    st.write('')
 
 try:
     videolink = pd.read_csv('videorating.csv')
