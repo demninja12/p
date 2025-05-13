@@ -4,11 +4,13 @@ import pandas as pd
 try:
     import plotly.express as px
 except:
-    st.error
+    st.error('')
 
 st.set_page_config(page_title='YouTube Pig',page_icon='🐷')
 
 menu = st.sidebar.selectbox('Menu',['Video Categories','Video Ratings'])
+
+
 
 try:
     videolink = pd.read_csv('videorating.csv')
