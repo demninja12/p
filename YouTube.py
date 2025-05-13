@@ -1,7 +1,10 @@
 import streamlit as st
 import webbrowser
 import pandas as pd
-import plotly_express as px
+try:
+    import plotly.express as px
+except:
+    st.error
 
 st.set_page_config(page_title='YouTube Pig',page_icon='🐷')
 
@@ -480,7 +483,15 @@ if menu == 'Video Categories':
             
 
 if menu == 'Video Ratings':
-    st.table(videolink)
-    melt_table = videolink.melt(var_name='Video Title',value_name='Plays')
-    plotbar = px.bar(melt_table, x = 'Video Title', y = 'Plays')
-    st.plotly_chart(plotbar)
+    try:
+        #st.table(videolink)
+        chart = st.radio('Chart',['Bar Chart','Pie Chart'])
+        melt_table = videolink.melt(var_name='Video Title',value_name='Plays')
+        if chart == 'Bar Chart':
+            plotbar = px.bar(melt_table, x = 'Video Title', y = 'Plays')
+            st.plotly_chart(plotbar)
+        if chart == 'Pie Chart':
+            piechart = px.pie(melt_table,names='Video Title',values='Plays')
+            st.plotly_chart(piechart)
+    except:
+        st.error('')
