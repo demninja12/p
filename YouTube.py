@@ -1,16 +1,15 @@
 import streamlit as st
 import webbrowser
 import pandas as pd
-try:
-    import plotly.express as px
-except:
-    st.error('')
 
 st.set_page_config(page_title='YouTube Pig',page_icon='🐷')
 
 menu = st.sidebar.selectbox('Menu',['Video Categories','Video Ratings'])
 
-
+try:
+    import plotly_express as px
+except:
+    st.error('')
 
 try:
     videolink = pd.read_csv('videorating.csv')
