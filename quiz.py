@@ -4,6 +4,11 @@ import pandas as pd
 st.set_page_config(page_title='Quiz',page_icon='❓')
 
 try:
+    import plotly_express as px
+except:
+    st.write('')
+
+try:
     quizscore = pd.read_csv('quiz.csv')
 except:
     quizscore = pd.DataFrame()
@@ -49,7 +54,7 @@ if menu == 'Quiz':
                     with easy1:
                         st.subheader('Who is the Creator of Roblox')
                         st.image('https://cms-media.roblox.com/resize=width:480,fit:max/ykLvjTBYRKSdcs8DSmft')
-                        options1 = st.radio('Question 1',['Choose','Jimmy Donaldson','David Baszucki','Elon Musk','Anthony Russo'],horizontal=True,label_visibility='collapsed')
+                        options1 = st.radio('Question 1',['Jimmy Donaldson','David Baszucki','Elon Musk','Anthony Russo'],horizontal=True,label_visibility='collapsed')
                         #if st.checkbox('Submit',key=1):
                                 #if options1 == 'David Baszucki':
                                     #q1 = 5
@@ -64,7 +69,7 @@ if menu == 'Quiz':
                         
                         st.subheader('When was Roblox Created')
                         st.image('https://cms-media.roblox.com/resize=width:480,fit:max/ykLvjTBYRKSdcs8DSmft')
-                        options2 = st.radio('Question 2',['Choose','2000','2002','2004','2006'],horizontal=True,label_visibility='collapsed')
+                        options2 = st.radio('Question 2',['2000','2002','2004','2006'],horizontal=True,label_visibility='collapsed')
                         #if st.checkbox('Submit',key=2):
                             #if options2 == '2006':
                                     #q2 = 5
@@ -81,7 +86,7 @@ if menu == 'Quiz':
                     with easy2:
                         st.subheader('Who was the First Player on Roblox')
                         st.image('https://cms-media.roblox.com/resize=width:480,fit:max/ykLvjTBYRKSdcs8DSmft')
-                        options3 = st.radio('Question 3',['Choose','Roblox','Builderman','John Doe','Jane Doe'],horizontal=True,label_visibility='collapsed')
+                        options3 = st.radio('Question 3',['Roblox','Builderman','John Doe','Jane Doe'],horizontal=True,label_visibility='collapsed')
                         #if st.checkbox('Submit',key=3):
                             #if options3 == 'Roblox':
                                     #q3 = 5
@@ -96,7 +101,7 @@ if menu == 'Quiz':
 
                         st.subheader('What is the Roblox Currency')
                         st.image('https://cms-media.roblox.com/resize=width:480,fit:max/ykLvjTBYRKSdcs8DSmft')
-                        options4 = st.radio('Question 4',['Choose','Bobux','VBucks','Tix','Robux'],horizontal=True,label_visibility='collapsed')
+                        options4 = st.radio('Question 4',['Bobux','VBucks','Tix','Robux'],horizontal=True,label_visibility='collapsed')
                         #if st.checkbox('Submit',key=4):
                             #if options4 == 'Robux':
                                     #q4 = 5
@@ -112,7 +117,7 @@ if menu == 'Quiz':
 
                     st.subheader('What is used to Make Roblox Games')
                     st.image('https://cms-media.roblox.com/resize=width:480,fit:max/ykLvjTBYRKSdcs8DSmft')
-                    options5 = st.radio('Question 5',['Choose','Roblox Creator','Roblox Hub','Roblox Studio','None of the aboves'],horizontal=True,label_visibility='collapsed')
+                    options5 = st.radio('Question 5',['Roblox Creator','Roblox Hub','Roblox Studio','None of the aboves'],horizontal=True,label_visibility='collapsed')
                     #if st.checkbox('Submit',key=5):
                         #if options5 == 'Roblox Studio':
                                 #q5 = 5
@@ -165,7 +170,7 @@ if menu == 'Quiz':
                 with medium1:
                     st.subheader('Whats the Roblox Friend Limit')
                     st.image('https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/optimized/4X/4/c/a/4cabe4ab181df8c3ccc12716e159a8ddc33898d9_2_690x230.png')
-                    options6 = st.radio('Question 6',['Choose','200','500','1000','No Limit'],horizontal=True,label_visibility='collapsed')
+                    options6 = st.radio('Question 6',['200','500','1000','No Limit'],horizontal=True,label_visibility='collapsed')
                     #if st.button('Submit',key=6):
                         #if options6 == '1000':
                             #try:
@@ -178,7 +183,7 @@ if menu == 'Quiz':
 
                     st.subheader('How many Players are there on Roblox')
                     st.image('https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/optimized/4X/4/c/a/4cabe4ab181df8c3ccc12716e159a8ddc33898d9_2_690x230.png')
-                    options7 = st.radio('Question 7',['Choose','20M','40M','60M','90M+'],horizontal=True,label_visibility='collapsed')
+                    options7 = st.radio('Question 7',['20M','40M','60M','90M+'],horizontal=True,label_visibility='collapsed')
                     #if st.button('Submit',key=7):
                         #if options7 == '90M+':
                             #try:
@@ -191,7 +196,7 @@ if menu == 'Quiz':
                 with medium2:
                     st.subheader('What was the First Game to Reach 1 Billion Visits')
                     st.image('https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/optimized/4X/4/c/a/4cabe4ab181df8c3ccc12716e159a8ddc33898d9_2_690x230.png')
-                    options8 = st.radio('Question 8',['Choose','Adopt Me','Piggy','Meep City','Blox Fruits'],horizontal=True,label_visibility='collapsed')
+                    options8 = st.radio('Question 8',['Adopt Me','Piggy','Meep City','Blox Fruits'],horizontal=True,label_visibility='collapsed')
                     #if st.button('Submit',key=8):
                         #if options8 == 'Meep City':
                             #try:
@@ -204,7 +209,7 @@ if menu == 'Quiz':
 
                     st.subheader('How many Games are there in Roblox')
                     st.image('https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/optimized/4X/4/c/a/4cabe4ab181df8c3ccc12716e159a8ddc33898d9_2_690x230.png')
-                    options9 = st.radio('Question 9',['Choose','90K-','100K - 900K','10M - 30M','40M+'],horizontal=True,label_visibility='collapsed')
+                    options9 = st.radio('Question 9',['90K-','100K - 900K','10M - 30M','40M+'],horizontal=True,label_visibility='collapsed')
                     #if st.button('Submit',key=9):
                         #if options9 == '40M+':
                             #try:
@@ -443,19 +448,19 @@ if menu == 'Quiz':
                             
                             #else:
 
-                        if options16 == 'True':
+                        if options16 == 'Roblox Points':
                                             quizscore.loc[0,username] +=20
                                             quizscore.to_csv('quiz.csv',index=False)
 
-                        if options17 == 'False':
+                        if options17 == '31K':
                                             quizscore.loc[0,username] +=20
                                             quizscore.to_csv('quiz.csv',index=False)
                                     
-                        if options18 == 'DynaBlocks':
+                        if options18 == '---':
                                             quizscore.loc[0,username] +=20
                                             quizscore.to_csv('quiz.csv',index=False)
                                     
-                        if options19 == 'False':
+                        if options19 == 'Blox Piece':
                                             quizscore.loc[0,username] +=20
                                             quizscore.to_csv('quiz.csv',index=False)
                                     
@@ -468,52 +473,104 @@ if menu == 'Quiz':
 
 
             if level == 'Impossible':
+
+                imp1,imp2 = st.columns(2)
                 
-                if st.sidebar.checkbox('Question 21'):
+                with imp1:
                     st.subheader('When was Toilet Tower Defence Created')
                     st.image('https://i.pinimg.com/736x/95/ee/e3/95eee32ca5f1395e6763cfce767e7c96.jpg')
                     options21 = st.radio('Question 21',['5/27/2023','6/17/2023','7/14/2023','4/29/2023'],horizontal=True,label_visibility='collapsed')
-                    if st.button('Submit',key=21):
-                        if options21 == '6/17/2023':
-                            try:
-                                quizscore.loc[0,'Score'] +=25
-                                quizscore.to_csv('quiz.csv',index=False)
-                            except:
-                                quizscore.loc[0,'Score'] =25
-                                quizscore.to_csv('quiz.csv',index=False)
+                    #if st.button('Submit',key=21):
+                        #if options21 == '6/17/2023':
+                            #try:
+                                #quizscore.loc[0,'Score'] +=25
+                                #quizscore.to_csv('quiz.csv',index=False)
+                            #except:
+                                #quizscore.loc[0,'Score'] =25
+                                #quizscore.to_csv('quiz.csv',index=False)
                 
-                if st.sidebar.checkbox('Question 22'):
+
                     st.subheader('When was Natural Disaster Survival Created')
                     st.image('https://i.pinimg.com/736x/95/ee/e3/95eee32ca5f1395e6763cfce767e7c96.jpg')
                     options22 = st.radio('Question 22',['4/12/2008','7/5/2009','6/9/2008','3/28/2008'],horizontal=True,label_visibility='collapsed')
-                    if st.button('Submit',key=22):
-                        if options22 == '3/28/2008':
-                            try:
-                                quizscore.loc[0,'Score'] +=25
-                                quizscore.to_csv('quiz.csv',index=False)
-                            except:
-                                quizscore.loc[0,'Score'] =25
-                                quizscore.to_csv('quiz.csv',index=False)
+                    #if st.button('Submit',key=22):
+                        #if options22 == '3/28/2008':
+                            #try:
+                                #quizscore.loc[0,'Score'] +=25
+                                #quizscore.to_csv('quiz.csv',index=False)
+                            #except:
+                                #quizscore.loc[0,'Score'] =25
+                                #quizscore.to_csv('quiz.csv',index=False)
                 
-                if st.sidebar.checkbox('Question 23'):
+                with imp2:
                     st.subheader('When was Piggy: Intercity DEMO Created')
                     st.image('https://i.pinimg.com/736x/95/ee/e3/95eee32ca5f1395e6763cfce767e7c96.jpg')
                     options23 = st.radio('Question 23',['1/2/2021','1/22/2021','2/2/2021','2/22/2021'],horizontal=True,label_visibility='collapsed')
-                    if st.button('Submit',key=23):
+                    #if st.button('Submit',key=23):
+                        #if options23 == '1/2/2021':
+                            #try:
+                                #quizscore.loc[0,'Score'] +=25
+                                #quizscore.to_csv('quiz.csv',index=False)
+                            #except:
+                                #quizscore.loc[0,'Score'] =25
+                                #quizscore.to_csv('quiz.csv',index=False)
+                    
+
+                    st.subheader('When was Break In (Story) Created')
+                    st.image('https://i.pinimg.com/736x/95/ee/e3/95eee32ca5f1395e6763cfce767e7c96.jpg')
+                    options24 = st.radio('Questions 24',['9/9/2019','04/03/2020','09/09/2021','01/15/2022'],horizontal=True,label_visibility='collapsed')
+
+                    
+                st.subheader('When was Tix Removed')
+                st.image('https://i.pinimg.com/736x/95/ee/e3/95eee32ca5f1395e6763cfce767e7c96.jpg')
+                options25 = st.radio('Questions 25',['9/6/2014','2/17/2015','4/14/2016','4/25/2018'],horizontal=True,label_visibility='collapsed')
+            
+                if st.sidebar.button('Submit',key=5):
+                    #points = q1 + q2 + q3 + q4 + q5
+                        quizscore.loc[0,username] =0
+                        quizscore.to_csv('quiz.csv',index=False)
+                            
+                            #else:
+
+                        if options21 == '6/17/2023':
+                                            quizscore.loc[0,username] +=25
+                                            quizscore.to_csv('quiz.csv',index=False)
+
+                        if options22 == '3/28/2008':
+                                            quizscore.loc[0,username] +=25
+                                            quizscore.to_csv('quiz.csv',index=False)
+                                    
                         if options23 == '1/2/2021':
-                            try:
-                                quizscore.loc[0,'Score'] +=25
-                                quizscore.to_csv('quiz.csv',index=False)
-                            except:
-                                quizscore.loc[0,'Score'] =25
-                                quizscore.to_csv('quiz.csv',index=False)
+                                            quizscore.loc[0,username] +=25
+                                            quizscore.to_csv('quiz.csv',index=False)
+                                    
+                        if options24 == '9/9/2019':
+                                            quizscore.loc[0,username] +=25
+                                            quizscore.to_csv('quiz.csv',index=False)
+                                    
+                        if options25 == '64/14/2016':
+                                            quizscore.loc[0,username] +=25
+                                            quizscore.to_csv('quiz.csv',index=False)
+                        st.sidebar.table(quizscore)
 
 
 
 
 
 if menu == 'Leaderboard':
-     st.table(quizscore)
+    st.table(quizscore)
+    try:
+        chart = st.sidebar.radio('Charts',['Bar Chart','Pie Chart'])
+        melt_table = quizscore.melt(var_name='Username',value_name='Score')
+        if chart == 'Bar Chart':
+                plotbar = px.bar(melt_table, x='Username',y='Score')
+                st.plotly_chart(plotbar)
+        
+        if chart == 'Pie Chart':
+                piechart = px.pie(melt_table,names='Username',values='Score')
+                st.plotly_chart(piechart)
+    except:
+        st.error('')
 
 
 
