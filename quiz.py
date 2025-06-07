@@ -17,11 +17,7 @@ except:
 
 st.title('Roblox Quiz')
 
-q1 =0
-q2 =0
-q3 =0
-q4 =0
-q5 =0
+
 
 score = 0
 
@@ -134,6 +130,7 @@ if menu == 'Quiz':
                         #points = q1 + q2 + q3 + q4 + q5
                         quizscore.loc[0,username] =0
                         quizscore.to_csv('quiz.csv',index=False)
+                        st.sidebar.success('Answers Submitted')
                         #if level == 'Easy':
                             #if options1 or options2 or options3 or options4 or options5 == 'Choose':
                                 #st.sidebar.error('Not all Questions have been Answered')
@@ -159,7 +156,7 @@ if menu == 'Quiz':
                         if options5 == 'Roblox Studio':
                                         quizscore.loc[0,username] +=5
                                         quizscore.to_csv('quiz.csv',index=False)
-                        st.sidebar.table(quizscore)
+
 
 
 
@@ -236,6 +233,7 @@ if menu == 'Quiz':
                         #points = q1 + q2 + q3 + q4 + q5
                         quizscore.loc[0,username] =0
                         quizscore.to_csv('quiz.csv',index=False)
+                        st.sidebar.success('Answers Submitted')
                         #if level == 'Medium':
                             #if options6 or options7 or options8 or options9 or options10 == 'Choose':
                                 #st.sidebar.error('Not all Questions have been Answered')
@@ -261,7 +259,7 @@ if menu == 'Quiz':
                         if options10 == 'Minitoon':
                                             quizscore.loc[0,username] +=10
                                             quizscore.to_csv('quiz.csv',index=False)
-                        st.sidebar.table(quizscore)
+                        #st.sidebar.table(quizscore)
 
 
 
@@ -344,6 +342,7 @@ if menu == 'Quiz':
                       #points = q1 + q2 + q3 + q4 + q5
                         quizscore.loc[0,username] =0
                         quizscore.to_csv('quiz.csv',index=False)
+                        st.sidebar.success('Answers Submitted')
                             
                             #else:
 
@@ -366,7 +365,7 @@ if menu == 'Quiz':
                         if options15 == '3':
                                             quizscore.loc[0,username] +=15
                                             quizscore.to_csv('quiz.csv',index=False)
-                        st.sidebar.table(quizscore)
+                        #st.sidebar.table(quizscore)
             
 
 
@@ -445,6 +444,7 @@ if menu == 'Quiz':
                         #points = q1 + q2 + q3 + q4 + q5
                         quizscore.loc[0,username] =0
                         quizscore.to_csv('quiz.csv',index=False)
+                        st.sidebar.success('Answers Submitted')
                             
                             #else:
 
@@ -467,7 +467,7 @@ if menu == 'Quiz':
                         if options20 == 'Barrier':
                                             quizscore.loc[0,username] +=20
                                             quizscore.to_csv('quiz.csv',index=False)
-                        st.sidebar.table(quizscore)
+                        #st.sidebar.table(quizscore)
 
 
 
@@ -529,6 +529,7 @@ if menu == 'Quiz':
                     #points = q1 + q2 + q3 + q4 + q5
                         quizscore.loc[0,username] =0
                         quizscore.to_csv('quiz.csv',index=False)
+                        st.sidebar.success('Answers Submitted')
                             
                             #else:
 
@@ -551,26 +552,47 @@ if menu == 'Quiz':
                         if options25 == '64/14/2016':
                                             quizscore.loc[0,username] +=25
                                             quizscore.to_csv('quiz.csv',index=False)
-                        st.sidebar.table(quizscore)
+                        #st.sidebar.table(quizscore)
 
 
 
 
 
 if menu == 'Leaderboard':
-    st.table(quizscore)
-    try:
-        chart = st.sidebar.radio('Charts',['Bar Chart','Pie Chart'])
-        melt_table = quizscore.melt(var_name='Username',value_name='Score')
-        if chart == 'Bar Chart':
+    #st.table(quizscore)
+    chart = st.sidebar.radio('Charts',['Player Score','Bar Chart','Pie Chart'])
+    melt_table = quizscore.melt(var_name='Username',value_name='Score')
+    if chart == 'Player Score':
+            user = st.sidebar.text_input('Enter Username:',placeholder='Enter Username:',label_visibility='collapsed')
+            if st.sidebar.button('Search Player'):
+                if user:
+                    try:
+                        searchuser = melt_table[melt_table['Username'].str.lower() == user.lower()]
+                        getuser = searchuser["Username"].iloc[0]
+                        getscore = searchuser['Score'].iloc[0]
+                        st.title(getuser)
+                        st.divider()
+                        st.header('Score:')
+                        st.subheader(getscore)
+                        
+                    except:
+                        st.error('')
+
+    if chart == 'Bar Chart':
+            try:
+                st.table(melt_table)
                 plotbar = px.bar(melt_table, x='Username',y='Score')
                 st.plotly_chart(plotbar)
-        
-        if chart == 'Pie Chart':
+            except:
+                st.error('')
+    
+    if chart == 'Pie Chart':
+            try:
+                st.table(melt_table)
                 piechart = px.pie(melt_table,names='Username',values='Score')
                 st.plotly_chart(piechart)
-    except:
-        st.error('')
+            except:
+                st.error('')
 
 
 
