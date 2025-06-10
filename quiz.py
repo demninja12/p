@@ -1,12 +1,9 @@
 import streamlit as st
 import pandas as pd
+import plotly_express as px
 
 st.set_page_config(page_title='Quiz',page_icon='❓')
 
-try:
-    import plotly_express as px
-except:
-    st.write('')
 
 try:
     quizscore = pd.read_csv('quiz.csv')
