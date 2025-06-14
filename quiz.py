@@ -573,7 +573,7 @@ if menu == 'Leaderboard':
                         st.subheader(getscore)
                         
                     except:
-                        st.error('')
+                        st.error('Player Does not Exist')
 
     if chart == 'Bar Chart':
             try:
