@@ -30,7 +30,6 @@ if menu == 'Quiz':
     username = st.text_input('Enter Username:',placeholder='Enter Username:',label_visibility='collapsed')
     if username:
         if st.sidebar.checkbox('Start Quiz'):
-            st.sidebar.write('Made by Dem')
 
             
             level = st.sidebar.radio('Difficulty',['Easy','Medium','Hard','X-Treme','Impossible'])
