@@ -29,7 +29,7 @@ if menu == 'Quiz':
 
     username = st.text_input('Enter Username:',placeholder='Enter Username:',label_visibility='collapsed')
     if username:
-        if st.sidebar.checkbox('Start Quiz'):
+        if st.sidebar.checkbox('Start Roblox Quiz'):
 
             
             level = st.sidebar.radio('Difficulty',['Easy','Medium','Hard','X-Treme','Impossible'])
@@ -553,6 +553,7 @@ if menu == 'Quiz':
                         #st.sidebar.table(quizscore)
 
 
+                pass
 
 
 
