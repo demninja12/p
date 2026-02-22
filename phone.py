@@ -14,7 +14,7 @@ phone,title = st.columns(2)
 
 
 
-donate = st.sidebar.number_input('Donate Here:')
+donate = st.sidebar.number_input('Donate Here:',0.01)
 if st.sidebar.button('Donate',key=1):
     try:
         phonestat.loc[0,'Raised'] +=donate
