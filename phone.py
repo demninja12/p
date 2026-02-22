@@ -34,23 +34,6 @@ try:
 except:
     raised = (0)
 
-#precent = 0
-#try:
-    #precent = raisedstat / 5
-#except:
-    #precent = 0
-
-
-
-#try:
-    #phonestat.loc[0,'Precentage'] = donate / 5
-    #phonestat.loc('phone.csv',index=False)
-#except:
-    #phonestat.loc[0,'Precentage'] = 0
-    #phonestat.to_csv('phone.csv',index=False)
-
-
-
 
 with phone:
     st.image('https://m.media-amazon.com/images/I/61IqkfGCw5L.jpg')
@@ -75,11 +58,15 @@ with stats1:
 with stats2:
     st.header('Precentage:')
     try:
-        precent = (int(raisedstat / 5))
-        st.subheader(precent)
+        st.subheader(int(raisedstat / 5))
     except:
         st.subheader('0%')
 
 st.divider()
+
+
+
+
+
 
 
